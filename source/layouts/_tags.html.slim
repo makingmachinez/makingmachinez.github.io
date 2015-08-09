@@ -1,0 +1,13 @@
+.unit
+  h1.headline
+    | Tags
+  - blog.tags.each do |tag, articles|
+    article.cassette.skin-yellow
+     = link_to tag_path(tag), class: 'tap'
+       .inner
+         .flexible
+           .item
+             p.sentence
+               | #{tag} (#{articles.size})
+           .item-caret
+             | &gt;

@@ -1,0 +1,13 @@
+.unit
+  h1.headline
+    | By Year
+  - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+    article.cassette.skin-yellow
+     = link_to blog_year_path(year), class: 'tap'
+       .inner
+         .flexible
+           .item
+             p.sentence
+               | #{year} (#{articles.size})
+           .item-caret
+             | &gt;
