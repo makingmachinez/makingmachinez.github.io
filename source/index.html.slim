@@ -3,49 +3,58 @@ pageable: true
 per_page: 10
 ---
 
-- page_articles.each_with_index do |article, i|
-  article.entry
-    h1
-      = link_to article
-        i.fa.fa-paper-plane-o
-        |  #{article.title}
-      span.meta
-        = article.date.strftime('%b %e')
-    ul.external-link
-      li
-        a href="http://b.hatena.ne.jp/entry/http://www.makingmachinez.com#{article.url}" class="hatena-bookmark-button" data-hatena-bookmark-title="#{article.title}" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"
-          img[src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;"]
-          script[type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"]
-      li
-        .fb-like data-href="http://www.makingmachinez.com#{article.url}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"
-        #fb-root
-        javascript:
-          (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1386417958332605&version=v2.0";
-          fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-      li
-        a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.makingmachinez.com#{article.url}" data-via="makingmachinez" data-text="#{article.title}"
-        javascript:
-          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
-    = article.summary
-    - unless article.summary == article.body
-      = link_to article
-        i.fa.fa-arrow-circle-right
-        |  READ MORE
-- if paginate && num_pages > 1
-  p
-    | Page
-    = page_number
-    |  of
-    = num_pages
-  - if prev_page
+.unit
+  h1.headline
+    | 原付改造ブログ::makingmachinez
+  section.cassette.skin-yellow
+    div style=("width: 100%; overflow: hidden;") 
+      #zflickjs style=("margin: 0 auto;") 
+        #zcontents.flickContainer
+          - g_list = %w(025 026 027 028 029 024 022 006 005)
+          - g_list.each do |g|
+            .zcol
+              p
+                img alt="" src="photo/gallery/#{g}.jpg"
+        #zflickLamp.zlamp
+      javascript:
+        (function(){
+          var init = function(){
+            new zflickjs({
+              id: 'zflickjs',
+              contents: 'zcontents',
+              col: 'zcol',
+              width: 400,
+              loop: true,
+              autoChange: true,
+              autoTimer: 4000,
+              lamp: 'zflickLamp'
+            });
+          };
+          window.addEventListener('DOMContentLoaded', init, false);
+        })();
+
+  - page_articles.each_with_index do |article, i|
+    article.cassette.skin-yellow
+      = link_to article, class: 'tap'
+        .inner
+          .flexible
+            .item
+              p.sentence.spacing
+                = article.title
+              p.small
+                = article.date.strftime('%Y.%-m.%-d')
+            .item-caret
+              | &gt;
+  - if paginate && num_pages > 1
     p
-      = link_to 'Previous page', prev_page
-- if paginate
-  - if next_page
-    p
-      = link_to 'Next page', next_page
+      | Page
+      = page_number
+      |  of
+      = num_pages
+    - if prev_page
+      p
+        = link_to 'Previous page', prev_page
+  - if paginate
+    - if next_page
+      p
+        = link_to 'Next page', next_page
