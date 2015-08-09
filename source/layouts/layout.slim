@@ -18,6 +18,13 @@ html
     - if current_article
       meta property="og:title" content="#{current_article.title}"
       meta property="og:url" content="http://www.makingmachinez.com#{current_article.url}"
+      - prev_article = current_article.previous_article
+      - if prev_article
+        link href="http://www.makingmachinez.com#{prev_article.url}" rel=("prev bookmark") title="#{prev_article.title}"
+      - next_article = current_article.next_article
+      - if next_article
+        link href="http://www.makingmachinez.com#{next_article.url}" rel=("next bookmark") title="#{next_article.title}"
+
     - else
       meta[property="og:title" content="原付改造ブログ::makingmachinez"]
       meta[property="og:url" content="http://www.makingmachinez.com"]
