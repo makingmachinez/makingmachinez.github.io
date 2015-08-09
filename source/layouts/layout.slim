@@ -4,11 +4,12 @@ html
     meta[charset="utf-8"]
     meta name="viewport" content="width=468"
     meta[http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"]
-    meta name="Keywords" content="#{current_article.title unless current_article.nil?},原付改造,原付,改造,Dio,ボアアップ,チャンバー,エアーフィルター,ブログ,makingmachinez"
+    meta name="Keywords" content="原付改造,原付,改造,Dio,ZX,ZZ,ZR,Jog,ボアアップ,チャンバー,エアーフィルター,ブログ,makingmachinez"
     meta name="description" content="makingmachinezでは、ボアアップしたライブDioZXの原付改造ブログ、インプレッション、ミニツーリングレポート公開してます"
     title
+      - unless data.page.title.nil?
+        | #{data.page.title} - 
       | 原付改造ブログ::makingmachinez
-      = ' - ' + current_article.title unless current_article.nil?
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     meta[property="og:type" content="article"]
     meta[property="og:description" content="ボアアップしたライブDioZXの原付改造ブログ、インプレッション、ミニツーリングレポート公開してます"]
