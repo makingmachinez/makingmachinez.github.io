@@ -2,7 +2,7 @@ doctype html
 html
   head
     meta[charset="utf-8"]
-    meta[name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0, maximum-scale=10"]
+    meta name="viewport" content="width=468"
     meta[http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"]
     meta name="Keywords" content="#{current_article.title unless current_article.nil?},原付改造,原付,改造,Dio,ボアアップ,チャンバー,エアーフィルター,ブログ,makingmachinez"
     meta name="description" content="makingmachinezでは、ボアアップしたライブDioZXの原付改造ブログ、インプレッション、ミニツーリングレポート公開してます"
@@ -11,7 +11,7 @@ html
       = ' - ' + current_article.title unless current_article.nil?
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     meta[property="og:type" content="article"]
-    meta[property="og:description" content="makingmachinezでは、ボアアップしたライブDioZXの原付改造ブログ、インプレッション、ミニツーリングレポート公開してます"]
+    meta[property="og:description" content="ボアアップしたライブDioZXの原付改造ブログ、インプレッション、ミニツーリングレポート公開してます"]
     meta[property="og:site_name" content="原付改造ブログ::makingmachinez"]
     meta[property="og:image" content="/imgs/archives_image.jpg"]
     - if current_article
@@ -21,21 +21,33 @@ html
       meta[property="og:title" content="原付改造ブログ::makingmachinez"]
       meta[property="og:url" content="http://www.makingmachinez.com"]
 
-    link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css"
-    link[href="/css/styles.css" rel="stylesheet" type="text/css"]
-    link href='http://fonts.googleapis.com/css?family=Butterfly+Kids|Schoolbell|monaco' rel='stylesheet' type='text/css'
-    script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
-    script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"
-                   
+    link[href="/css/makingmachinez.css" rel="stylesheet" type="text/css"]
+    link[href="/css/zflick.css" rel="stylesheet" type="text/css"]
+    script src="/js/zflick-2.1.min.js"
+    script src="/js/hackleberry.min.js"
+
   body
-    header.header
-      .container
-        h1.logo
-          = link_to 'http://www.funnythingz.com'
-            | funnythingz
-        p.description
-          | てきとうなblogです
+    .container
+      header.header
+        .inner
+          h1.logo
+            = link_to "http://www.makingmachinez.com/", class: 'hero'
+              |
+          p.hide makingmachinezでは、ボアアップしたライブDioZXの原付改造ブログ、インプレッション、ミニツーリングレポート公開してます。
+          nav#navigation.navigation
+            ul.unstyled
+              li#menu1
+                = link_to "/archives.html"
+                  | 原付改造
+              li#menu2
+                = link_to "/spec.html"
+                  | インプレ
+              li#menu3
+                = link_to "/parts.html"
+                  | パーツ
+              li#menu4
+                = link_to "/about.html"
+                  | あばうつ
     #main[role="main"]
       .container
         article.entry
