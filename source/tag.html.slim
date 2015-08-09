@@ -1,0 +1,33 @@
+---
+pageable: true
+per_page: 10
+---
+
+.unit
+  h1.headline
+    | Articles tagged '#{tagname}'
+  - page_articles.each do |article|
+    article.cassette.skin-yellow
+     = link_to article, class: 'tap' 
+       .inner
+         .flexible
+           .item
+             p.sentence
+               = article.title
+             p.small
+               = article.date.strftime('%Y.%-m.%-d')
+           .item-caret
+             | &gt;
+
+- if paginate && num_pages > 1
+  p
+    | Page #{page_number} of #{num_pages}
+
+  - if prev_page
+    p
+      = link_to 'Previous page', prev_page
+
+- if paginate
+  - if next_page
+    p
+      = link_to 'Next page', next_page
