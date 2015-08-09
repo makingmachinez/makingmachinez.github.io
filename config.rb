@@ -78,9 +78,9 @@ end
 #   end
 # end
 
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
+set :css_dir, 'css'
+set :js_dir, 'js'
+set :images_dir, 'imgs'
 set :partials_dir, 'partials'
 
 activate :deploy do |deploy|
@@ -97,9 +97,16 @@ set :markdown, fenced_code_blocks: true, smartypants: true, with_toc_data: true,
 # Code highlighting
 activate :syntax
 
+# slim
+set :slim, pretty: true, sort_attrs: false, format: :html5 
+
 # Build-specific configuration
 configure :build do
   activate :minify_html, remove_quotes: false, remove_intertag_spaces: true
+  activate :minify_css
+  activate :minify_javascript
+  activate :asset_hash
+  
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
