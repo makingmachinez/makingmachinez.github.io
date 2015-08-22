@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Blog Name</title>
-  <subtitle>Blog subtitle</subtitle>
-  <id>http://blog.url.com/</id>
-  <link href="http://blog.url.com/"/>
-  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <title>原付改造カスタムブログ::makingmachinez</title>
+  <subtitle>ボアアップしたライブDioZXの原付改造カスタムブログ、インプレッション、ミニツーリングレポート公開してます</subtitle>
+  <id>http://www.makingmachinez.com/</id>
+  <link href="http://www.makingmachinez.com/"/>
+  <link href="http://www.makingmachinez.com/feed.xml" rel="self"/>
   <updated>2013-06-09T00:00:00+09:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
   <entry>
     <title>Navarまとめにのってたお (けっこう前だけど)</title>
-    <link rel="alternate" href="http://blog.url.com/2013/06/navar.html"/>
-    <id>http://blog.url.com/2013/06/navar.html</id>
+    <link rel="alternate" href="http://www.makingmachinez.com/2013/06/navar.html"/>
+    <id>http://www.makingmachinez.com/2013/06/navar.html</id>
     <published>2013-06-09T00:00:00+09:00</published>
     <updated>2015-08-22T16:20:43+09:00</updated>
     <author>
@@ -39,8 +39,8 @@
   </entry>
   <entry>
     <title>原付新しく買って改造ブログ再開するかも！？さらにiPhone, Android, iPadなどのスマートフォン端末でも見れるようになったよ！</title>
-    <link rel="alternate" href="http://blog.url.com/2011/10/iphone-android.html"/>
-    <id>http://blog.url.com/2011/10/iphone-android.html</id>
+    <link rel="alternate" href="http://www.makingmachinez.com/2011/10/iphone-android.html"/>
+    <id>http://www.makingmachinez.com/2011/10/iphone-android.html</id>
     <published>2011-10-26T00:00:00+09:00</published>
     <updated>2015-08-22T15:42:21+09:00</updated>
     <author>
@@ -64,8 +64,8 @@
   </entry>
   <entry>
     <title>スーパーDioの修復を試みてみた。そしてまさかの最終回！？</title>
-    <link rel="alternate" href="http://blog.url.com/2009/12/dio-8.html"/>
-    <id>http://blog.url.com/2009/12/dio-8.html</id>
+    <link rel="alternate" href="http://www.makingmachinez.com/2009/12/dio-8.html"/>
+    <id>http://www.makingmachinez.com/2009/12/dio-8.html</id>
     <published>2009-12-30T00:00:00+09:00</published>
     <updated>2015-08-22T17:31:43+09:00</updated>
     <author>
@@ -116,8 +116,8 @@
   </entry>
   <entry>
     <title>弟のスーパーDioを復活させるかも？</title>
-    <link rel="alternate" href="http://blog.url.com/2009/12/dio-7.html"/>
-    <id>http://blog.url.com/2009/12/dio-7.html</id>
+    <link rel="alternate" href="http://www.makingmachinez.com/2009/12/dio-7.html"/>
+    <id>http://www.makingmachinez.com/2009/12/dio-7.html</id>
     <published>2009-12-12T00:00:00+09:00</published>
     <updated>2015-08-22T16:31:02+09:00</updated>
     <author>
@@ -152,8 +152,8 @@
   </entry>
   <entry>
     <title>スーパーDioちゃん死亡？</title>
-    <link rel="alternate" href="http://blog.url.com/2009/12/dio-6.html"/>
-    <id>http://blog.url.com/2009/12/dio-6.html</id>
+    <link rel="alternate" href="http://www.makingmachinez.com/2009/12/dio-6.html"/>
+    <id>http://www.makingmachinez.com/2009/12/dio-6.html</id>
     <published>2009-12-09T00:00:00+09:00</published>
     <updated>2015-08-22T16:31:08+09:00</updated>
     <author>
@@ -194,8 +194,8 @@
   </entry>
   <entry>
     <title>スーパーDioは通勤用</title>
-    <link rel="alternate" href="http://blog.url.com/2009/11/dio-5.html"/>
-    <id>http://blog.url.com/2009/11/dio-5.html</id>
+    <link rel="alternate" href="http://www.makingmachinez.com/2009/11/dio-5.html"/>
+    <id>http://www.makingmachinez.com/2009/11/dio-5.html</id>
     <published>2009-11-18T00:00:00+09:00</published>
     <updated>2015-08-22T16:47:15+09:00</updated>
     <author>
