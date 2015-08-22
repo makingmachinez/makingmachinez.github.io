@@ -5,9 +5,9 @@ per_page: 10
 
 .unit
   h1.headline
-    | Articles tagged '#{tagname}'
+    | 原付改造#{tagname}
   - page_articles.each do |article|
-    article.cassette.skin-yellow
+    article.cassette.skin-pink
      = link_to article, class: 'tap' 
        .inner
          .flexible
