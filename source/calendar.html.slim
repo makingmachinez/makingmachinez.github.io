@@ -1,16 +1,6 @@
 ---
-pageable: true
+pageable: false
 ---
-
-- if paginate && num_pages > 1
-  p
-    | Page 
-    = page_number
-    |  of 
-    = num_pages
-  - if prev_page
-    p
-      = link_to 'Previous page', prev_page
 
 .unit
   h1.headline
@@ -35,7 +25,3 @@ pageable: true
                 = article.date.strftime('%Y.%-m.%-d')
             .item-caret
               | &gt;
-- if paginate
-  - if next_page
-    p
-      = link_to 'Next page', next_page
