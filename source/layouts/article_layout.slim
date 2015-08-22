@@ -7,11 +7,7 @@
       = current_article.title
     article.cassette.skin-pink
       .inner
-        .spacing
-          script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-          ins.adsbygoogle data-ad-client="ca-pub-8570723468408214" data-ad-format="auto" data-ad-slot="1322076770" style="display:block"
-          javascript:
-            (adsbygoogle = window.adsbygoogle || []).push({});
+        = partial 'layouts/ad_in_section'
         = yield
     section.cassette.skin-pink
       .inner
