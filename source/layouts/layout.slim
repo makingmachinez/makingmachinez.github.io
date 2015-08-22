@@ -5,17 +5,17 @@ html
     meta name="viewport" content="width=468"
     meta[http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"]
     meta name="Keywords" content="原付改造,原付,改造,Dio,ZX,ZZ,ZR,Jog,ボアアップ,チャンバー,エアーフィルター,ブログ,makingmachinez"
-    meta name="description" content="makingmachinezでは、ボアアップしたライブDioZXの原付改造ブログ、インプレッション、ミニツーリングレポート公開してます"
+    meta name="description" content="makingmachinezでは、ボアアップしたライブDioZXの原付改造カスタムブログ、インプレッション、ミニツーリングレポート公開してます"
     title
       - unless data.page.title.nil?
         | #{data.page.title} - 
       - unless yield_content(:title).nil?
         | #{yield_content(:title)} - 
-      | 原付改造ブログ::makingmachinez
+      | 原付改造カスタムブログ::makingmachinez
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     meta[property="og:type" content="article"]
-    meta[property="og:description" content="ボアアップしたライブDioZXの原付改造ブログ、インプレッション、ミニツーリングレポート公開してます"]
-    meta[property="og:site_name" content="原付改造ブログ::makingmachinez"]
+    meta[property="og:description" content="ボアアップしたライブDioZXの原付改造カスタムブログ、インプレッション、ミニツーリングレポート公開してます"]
+    meta[property="og:site_name" content="原付改造カスタムブログ::makingmachinez"]
     meta[property="og:image" content="/imgs/archives_image.jpg"]
     - if current_article
       meta property="og:title" content="#{current_article.title}"
@@ -28,7 +28,7 @@ html
         link href="http://www.makingmachinez.com#{next_article.url}" rel=("next bookmark") title="#{next_article.title}"
 
     - else
-      meta[property="og:title" content="原付改造ブログ::makingmachinez"]
+      meta[property="og:title" content="原付改造カスタムブログ::makingmachinez"]
       meta[property="og:url" content="http://www.makingmachinez.com"]
 
     link[href="/css/makingmachinez.css" rel="stylesheet" type="text/css"]
