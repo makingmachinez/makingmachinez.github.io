@@ -1,17 +1,21 @@
 ---
 pageable: false
 ---
+- @n
+- case page_type
+- when 'day'
+  - @n = Date.new(year, month, day).strftime('%Y-%-m-%d')
+- when 'month'
+  - @n = Date.new(year, month, 1).strftime('%Y-%-m')
+- when 'year'
+  - @n = year
+
+- content_for(:title, "原付改造#{@n}まとめ")
 
 .unit
   h1.headline
     | 原付改造
-    - case page_type
-    - when 'day'
-      = Date.new(year, month, day).strftime('%Y-%-m-%d')
-    - when 'month'
-      = Date.new(year, month, 1).strftime('%Y-%-m')
-    - when 'year'
-      = year
+    = @n
     | まとめ
   - page_articles.each_with_index do |article, i|
     article.cassette.skin-pink

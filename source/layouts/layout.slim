@@ -9,6 +9,8 @@ html
     title
       - unless data.page.title.nil?
         | #{data.page.title} - 
+      - unless yield_content(:title).nil?
+        | #{yield_content(:title)} - 
       | 原付改造ブログ::makingmachinez
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     meta[property="og:type" content="article"]

@@ -12,3 +12,19 @@ title: ライブDio/ライブDioZX/スーパーDioを改造カスタムする日
       p.lead.center.bold
         | ライブDio/ライブDioZX/スーパーDioを改造カスタムする日々の記録
 
+- blog.tags.each do |tag, articles|
+  .unit
+    h1.headline
+      = tag
+    - articles.each do |article|
+      article.cassette.skin-pink
+       = link_to article, class: 'tap'
+         .inner
+           .flexible
+             .item
+               p.sentence
+                 = article.title
+               p.small
+                 = article.date.strftime('%Y.%-m.%-d')
+             .item-caret
+               | &gt;
