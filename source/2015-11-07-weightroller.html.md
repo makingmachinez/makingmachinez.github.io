@@ -1,4 +1,5 @@
 ---
+id: livedio-weightroller
 title: ウェイトローラーが粉々だったから交換した
 date: 2015-11-07 12:48 JST
 tags:
