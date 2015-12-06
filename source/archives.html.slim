@@ -21,7 +21,7 @@ section.spacing.center
       = tag
     - articles.each do |article|
       article.cassette.skin-pink
-       = link_to article, class: 'tap'
+       = link_to article, class: 'tap', onclick: "ga('send', 'event', 'archives', 'click', '#{article.title}')"
          .inner
            .flexible
              .item

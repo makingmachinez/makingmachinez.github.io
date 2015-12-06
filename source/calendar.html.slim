@@ -19,7 +19,7 @@ pageable: false
     | まとめ
   - page_articles.each_with_index do |article, i|
     article.cassette.skin-pink
-      = link_to article, class: 'tap'
+      = link_to article, class: 'tap', onclick: "ga('send', 'event', 'calendar', 'click', '#{article.title}')"
         .inner
           .flexible
             .item

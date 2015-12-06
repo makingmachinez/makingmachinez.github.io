@@ -3,7 +3,7 @@
     | Archives
   - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
     article.cassette.skin-yellow
-      = link_to blog_year_path(year), class: 'tap ga-archives'
+      = link_to blog_year_path(year), class: 'tap ga-archives', onclick: "ga('send', 'event', 'archives', 'click', #{year})"
         .inner
           .flexible
             .item
@@ -13,12 +13,3 @@
                 |  (#{articles.size})
             .item-caret
               | &gt;
-      javascript:
-        (function() {
-          var $els = $('.ga-archives');
-          $els.each(function(i, el) {
-            $(el).on('click', function() {
-              ga("send", "event", "archives", "click", $('.year', $(this)).text());
-            });
-          });
-        })();
