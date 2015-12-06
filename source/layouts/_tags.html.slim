@@ -3,11 +3,22 @@
     | Tags
   - blog.tags.each do |tag, articles|
     article.cassette.skin-yellow
-     = link_to tag_path(tag), class: 'tap'
-       .inner
-         .flexible
-           .item
-             p.sentence
-               | #{tag} (#{articles.size})
-           .item-caret
-             | &gt;
+      = link_to tag_path(tag), class: 'tap ga-tags'
+        .inner
+          .flexible
+            .item
+              p.sentence
+                span.tag
+                  | #{tag}
+                |  (#{articles.size})
+            .item-caret
+              | &gt;
+      javascript:
+        (function() {
+          var $els = $('.ga-tags');
+          $els.each(function(i, el) {
+            $(el).on('click', function() {
+              ga("send", "event", "tags", "click", $('.tag', $(this)).text());
+            });
+          });
+        })();
