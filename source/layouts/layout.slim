@@ -40,13 +40,13 @@ html
 
   body
     .container
+      = partial 'layouts/analytics'
       = partial 'layouts/header'
       section.contents
         = partial 'layouts/ad-header'
         = yield
         = partial 'layouts/comment'
       = partial 'layouts/adsense'
-      = partial 'layouts/analytics'
       = partial 'layouts/tags'
       = partial 'layouts/year'
       = partial 'layouts/footer'
