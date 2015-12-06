@@ -18,3 +18,12 @@ header.header
         li#menu4
           = link_to "/about.html"
             | あばうつ
+      javascript:
+        (function() {
+          var $menu = $('#navigation ul li a');
+          $menu.each(function(i, el) {
+            $(el).on('click', function() {
+              ga("send", "event", "navigation", "click", $(this).text());
+            });
+          });
+        })();
