@@ -16,11 +16,11 @@
             - prev_article = current_article.previous_article
             - if prev_article
               p.small
-                = link_to prev_article.url
+                = link_to prev_article.url, onclick: "ga('send', 'event', 'prev_article', '#{prev_article.title}')"
                   | &lt;&lt;&nbsp;#{prev_article.title}
           .item.right
             - next_article = current_article.next_article
             - if next_article
               p.small
-                = link_to next_article.url
+                = link_to next_article.url, onclick: "ga('send', 'event', 'next_article', '#{next_article.title}')"
                   | #{next_article.title}&nbsp;&gt;&gt;
