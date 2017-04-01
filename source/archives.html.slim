@@ -15,7 +15,7 @@ title: ライブディオ/ライブディオZX/スーパーディオを改造カ
 section.spacing.center
   = partial 'layouts/ad_in_section'
 
-- blog.tags.each do |tag, articles|
+- blog.tags.reverse_each do |tag, articles|
   .unit
     h1.headline
       = tag
