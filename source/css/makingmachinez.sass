@@ -1,3 +1,5 @@
+@import 'compass/css3'
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol.unstyled, ul.unstyled, li.unstyled, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
@@ -946,24 +948,30 @@ body
   background-color: #f90
 
 .header
-  .logo .hero
-    display: block
-    width: 420px
-    height: 100px
+  .logo
     background-image: url(../imgs/header.gif)
     background-repeat: no-repeat
     background-position: 0 0
+    +background-size(420px 89px)
+    .hero
+      display: block
+      width: 420px
+      height: 89px
 
   .inner
     width: 420px
     margin-right: auto
     margin-left: auto
 
+.hero-visual
+  img
+    vertical-align: top
+
 .navigation
   height: 30px
   background-image: url(../imgs/bg_menu.gif)
   background-repeat: no-repeat
-  background-position: center 0
+  background-position: 0 0
 
   > ul
     zoom: 1
@@ -989,13 +997,13 @@ body
         font-size: 12px
         line-height: 1.2
         display: block
-        width: 100px
+        width: 88px
         padding: 4px 6px
         text-decoration: none
         color: #000
         background-image: url(../imgs/menu_icon.gif)
         background-repeat: no-repeat
-        background-position: 4px 4px
+        background-position: 2px 4px
 
         &:hover
           color: #f7f8f9
@@ -1026,3 +1034,21 @@ body
 .adsense
   width: 420px
   margin: 10px auto
+
+.external-link
+  text-align: center
+  li
+    list-style: none
+    display: inline-block
+    vertical-align: top
+    margin-left: 1em
+    &:first-child
+      margin-left: 0
+
+.footer
+  font-size: 12px
+  line-height: 1.4
+
+.article
+  img
+    width: 380px
