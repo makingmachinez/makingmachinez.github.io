@@ -44,7 +44,11 @@ html
         enable_page_level_ads: true
       });
 
+    = partial 'layouts/gtm_setup'
+
   body
+    = partial 'layouts/gtm_body'
+
     .container
       = partial 'layouts/analytics'
       = partial 'layouts/header'
