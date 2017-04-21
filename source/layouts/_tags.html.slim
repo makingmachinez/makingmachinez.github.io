@@ -1,8 +1,12 @@
 .card
   .card-header
     | Tags
-  .list-group.list-group-flush
+  .list-group
     - blog.tags.each do |tag, articles|
-      = link_to tag_path(tag), class: 'list-group-item'
-        | #{tag}
-        |  (#{articles.size})
+      = link_to tag_path(tag), class: 'list-group-item full'
+        .full
+          span.pull-left
+            | #{tag}
+            |  (#{articles.size})
+          span.pull-right
+            i.fa.fa-arrow-right aria-hidden="true"

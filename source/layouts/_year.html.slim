@@ -1,15 +1,12 @@
-.unit
-  h1.headline
+.card
+  .card-header
     | Archives
-  - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-    article.cassette.skin-yellow
-      = link_to blog_year_path(year), class: 'tap ga-archives', onclick: "ga('send', 'event', 'archives', 'click', #{year})"
-        .inner
-          .flexible
-            .item
-              p.sentence
-                span.year
-                  | #{year}
-                |  (#{articles.size})
-            .item-caret
-              | &gt;
+  .list-group
+    - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+      = link_to blog_year_path(year), class: 'list-group-item full'
+        .full
+          span.pull-left
+            | #{year}
+            |  (#{articles.size})
+          span.pull-right
+            i.fa.fa-arrow-right aria-hidden="true"
