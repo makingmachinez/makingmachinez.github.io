@@ -14,7 +14,7 @@
   font-size: 24px
   height: 80px
   line-height: 80px
-  font-family: 'Rock Salt', cursive
+  font-family: 'Faster One', cursive
   &:before
     @extend %_logo-icon
     background: url('../imgs/svgbike/dio_1.svg') no-repeat 0 0
@@ -23,3 +23,7 @@
     @extend %_logo-icon
     background: url('../imgs/svgbike/zx_5.svg') no-repeat 0 0
     right: 10px
+  .logo-text
+    position: relative
+    z-index: 1
+    +text-shadow(3px 2px 10px #f7f8f9, 3px -2px 10px #f7f8f9)
