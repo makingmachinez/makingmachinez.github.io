@@ -3,10 +3,10 @@
     | Archives
   .list-group
     - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-      = link_to blog_year_path(year), class: 'list-group-item full'
+      = link_to blog_year_path(year), class: 'list-group-item'
         .full
           span.pull-left
             | #{year}
             |  (#{articles.size})
           span.pull-right
-            i.fa.fa-arrow-right aria-hidden="true"
+            i.fa.fa-chevron-right aria-hidden="true"

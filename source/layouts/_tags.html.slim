@@ -3,10 +3,10 @@
     | Tags
   .list-group
     - blog.tags.each do |tag, articles|
-      = link_to tag_path(tag), class: 'list-group-item full'
+      = link_to tag_path(tag), class: 'list-group-item'
         .full
           span.pull-left
             | #{tag}
             |  (#{articles.size})
           span.pull-right
-            i.fa.fa-arrow-right aria-hidden="true"
+            i.fa.fa-chevron-right aria-hidden="true"
