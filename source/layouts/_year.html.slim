@@ -1,12 +1,12 @@
 .card
-  .card-header
+  .card-header.headline
     | Archives
-  .list-group
+  .list-group.list-group-flush
     - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-      = link_to blog_year_path(year), class: 'list-group-item'
+      = link_to blog_year_path(year), class: 'list-group-item skin-yellow'
         .full
           span.pull-left
             | #{year}
             |  (#{articles.size})
-          span.pull-right
+          span.pull-right.w-0
             i.fa.fa-chevron-right aria-hidden="true"

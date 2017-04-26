@@ -4,9 +4,9 @@ per_page: 10
 ---
 
 .card
-  .card-header
+  .card-header.headline
     | 原付改造カスタムブログ::makingmachinez
-  .card-body
+  .card-body.skin-yellow
     div style=("width: 100%; overflow: hidden;") 
       #zflickjs style=("margin: 0 auto;") 
         #zcontents.flickContainer
@@ -32,14 +32,14 @@ per_page: 10
           };
           window.addEventListener('DOMContentLoaded', init, false);
         })();
-  .list-group
+  .list-group.list-group-flush
     - page_articles.[](0..4).each do |article|
-      = link_to article, class: 'list-group-item'
+      = link_to article, class: 'list-group-item skin-yellow'
         .full
           span.pull-left
             p
               = article.title
             p.small
               = article.date.strftime('%Y.%-m.%-d')
-          span.pull-right
+          span.pull-right.w-0
             i.fa.fa-chevron-right aria-hidden="true"
