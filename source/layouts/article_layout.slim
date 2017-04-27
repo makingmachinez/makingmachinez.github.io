@@ -11,16 +11,18 @@
       = partial 'layouts/ad_in_section'
       section.article
         = yield
-    .card-block.skin-pink
+    .card-block.skin-pink.pager
       .pull-left
         - prev_article = current_article.previous_article
         - if prev_article
           p.small
             = link_to prev_article.url, onclick: "ga('send', 'event', 'prev_article', 'click', '#{prev_article.title}')"
-              | &lt;&lt;&nbsp;#{prev_article.title}
+              i.fa.fa-caret-left aria-hidden="true"
+              | &nbsp;#{prev_article.title}
       .pull-right
         - next_article = current_article.next_article
         - if next_article
           p.small
             = link_to next_article.url, onclick: "ga('send', 'event', 'next_article', 'click', '#{next_article.title}')"
-              | #{next_article.title}&nbsp;&gt;&gt;
+              | #{next_article.title}&nbsp;
+              i.fa.fa-caret-right aria-hidden="true"
