@@ -3,18 +3,17 @@ pageable: false
 ---
 - content_for(:title, "原付改造#{tagname}")
 
-.unit
-  h1.headline
+.card
+  .card-header.headline
     | 原付改造#{tagname}
-  - page_articles.each do |article|
-    article.cassette.skin-pink
-     = link_to article, class: 'tap' 
-       .inner
-         .flexible
-           .item
-             p.sentence
-               = article.title
-             p.small
-               = article.date.strftime('%Y.%-m.%-d')
-           .item-caret
-             | &gt;
+  .list-group.list-group-flush
+    - page_articles.each do |article|
+      = link_to article, class: 'list-group-item skin-yellow', onclick: "ga('send', 'event', 'tag', 'click', '#{article.title}')"
+        .full
+          span.pull-left
+            p
+              = article.title
+            p.small
+              = article.date.strftime('%Y.%-m.%-d')
+          span.pull-right.w-0
+            i.fa.fa-chevron-right aria-hidden="true"
