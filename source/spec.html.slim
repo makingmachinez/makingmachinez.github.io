@@ -2,14 +2,14 @@
 title: スペック・インプレッション
 ---
 
-.unit
-  h1.headline
+.card
+  .card-header.headline
     | スペック・インプレッション
-  .cassette.skin-red.hero-visual
-    .center
-      img alt="スペック・インプレッション" src="imgs/spec.jpg" width="100%"
-    .inner
-      p.lead.center.bold
+  .card-body.skin-red.text-center
+    = image_tag 'imgs/spec.jpg', alt: 'スペック・インプレッション', class: 'img-fluid'
+  .card-block.skin-red
+    p.text-center
+      b
         | 原付改造インプレッション
         br
         | ひろZX/とだディオ/ひろディオの改造スペックです
@@ -17,72 +17,59 @@ title: スペック・インプレッション
 section.spacing.center
   = partial 'layouts/ad_in_section'
 
-.unit
-  h1.headline ライブディオZX - ひろZXスペック
-  article.cassette.skin-red
-    = link_to '/2005/03/diozx-4.html', class: 'tap', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオZX（排ガス規制後モデル）その4')"
-      .inner
-        .flexible
-          .item
-            p.sentence
-              | ライブディオZX（排ガス規制後モデル）その4
-          .item-caret
-            | &gt;
-  article.cassette.skin-red
-    = link_to '/2004/03/livediozx5.html', class: 'tap', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオZX（排ガス規制後モデル）その3')"
-      .inner
-        .flexible
-          .item
-            p.sentence
-              | ライブディオZX（排ガス規制後モデル）その3
-          .item-caret
-            | &gt;
-  article.cassette.skin-red
-    = link_to '/2004/01/diozx2.html', class: 'tap', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオZX（排ガス規制後モデル）その2')"
-      .inner
-        .flexible
-          .item
-            p.sentence
-              | ライブディオZX（排ガス規制後モデル）その2
-          .item-caret
-            | &gt;
-  article.cassette.skin-red
-    = link_to '/2003/12/livediozx1.html', class: 'tap', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオZX（排ガス規制後モデル）その1')"
-      .inner
-        .flexible
-          .item
-            p.sentence
-              | ライブディオZX（排ガス規制後モデル）その1
-          .item-caret
-            | &gt;
-.unit
-  h1.headline ライブディオ - とだディオスペック
-  article.cassette.skin-red
-    = link_to '/2004/09/dio2002100kmh.html', class: 'tap', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオ（排ガス規制後モデル）爆速100km/h☆戸田仕様')"
-      .inner
-        .flexible
-          .item
-            p.sentence
-              | ライブディオ（排ガス規制後モデル）爆速100km/h☆戸田仕様
-          .item-caret
-            | &gt;
-  article.cassette.skin-red
-    = link_to '/2004/03/dio2000.html', class: 'tap', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオ（排ガス規制後モデル）ファーストフルチューニング')"
-      .inner
-        .flexible
-          .item
-            p.sentence
-              | ライブディオ（排ガス規制後モデル）ファーストフルチューニング
-          .item-caret
-            | &gt;
-.unit
-  h1.headline スーパーディオ - ひろディオスペック
-  article.cassette.skin-red
-    = link_to '/2004/03/superdio92.html', class: 'tap', onclick: "ga('send', 'event', 'spec', 'click', 'スーパーディオ（92年スペシャルエディション）通勤爆速仕様')"
-      .inner
-        .flexible
-          .item
-            p.sentence
-              | スーパーディオ（92年スペシャルエディション）通勤爆速仕様
-          .item-caret
-            | &gt;
+.card
+  .card-header.headline
+    | ライブディオZX - ひろZXスペック
+  .list-group.list-group-flush
+    = link_to '/2005/03/diozx-4.html', class: 'list-group-item skin-red', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオZX（排ガス規制後モデル）その4')"
+      .full
+        span.pull-left
+          | ライブディオZX（排ガス規制後モデル）その4
+        span.pull-right.w-0
+          i.fa.fa-chevron-right aria-hidden="true"
+    = link_to '/2004/03/livediozx5.html', class: 'list-group-item skin-red', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオZX（排ガス規制後モデル）その3')"
+      .full
+        span.pull-left
+          | ライブディオZX（排ガス規制後モデル）その3
+        span.pull-right.w-0
+          i.fa.fa-chevron-right aria-hidden="true"
+    = link_to '/2004/01/diozx2.html', class: 'list-group-item skin-red', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオZX（排ガス規制後モデル）その2')"
+      .full
+        span.pull-left
+          | ライブディオZX（排ガス規制後モデル）その2
+        span.pull-right.w-0
+          i.fa.fa-chevron-right aria-hidden="true"
+    = link_to '/2003/12/livediozx1.html', class: 'list-group-item skin-red', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオZX（排ガス規制後モデル）その1')"
+      .full
+        span.pull-left
+          | ライブディオZX（排ガス規制後モデル）その1
+        span.pull-right.w-0
+          i.fa.fa-chevron-right aria-hidden="true"
+
+.card
+  .card-header.headline
+    | ライブディオ - とだディオスペック
+  .list-group.list-group-flush
+    = link_to '/2004/09/dio2002100kmh.html', class: 'list-group-item skin-red', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオ（排ガス規制後モデル）爆速100km/h☆戸田仕様')"
+      .full
+        span.pull-left
+          | ライブディオ（排ガス規制後モデル）爆速100km/h☆戸田仕様
+        span.pull-right.w-0
+          i.fa.fa-chevron-right aria-hidden="true"
+    = link_to '/2004/03/dio2000.html', class: 'list-group-item skin-red', onclick: "ga('send', 'event', 'spec', 'click', 'ライブディオ（排ガス規制後モデル）ファーストフルチューニング')"
+      .full
+        span.pull-left
+          | ライブディオ（排ガス規制後モデル）ファーストフルチューニング
+        span.pull-right.w-0
+          i.fa.fa-chevron-right aria-hidden="true"
+
+.card
+  .card-header.headline
+    | スーパーディオ - ひろディオスペック
+  .list-group.list-group-flush
+    = link_to '/2004/03/superdio92.html', class: 'list-group-item skin-red', onclick: "ga('send', 'event', 'spec', 'click', 'スーパーディオ（92年スペシャルエディション）通勤爆速仕様')"
+      .full
+        span.pull-left
+          | スーパーディオ（92年スペシャルエディション）通勤爆速仕様
+        span.pull-right.w-0
+          i.fa.fa-chevron-right aria-hidden="true"

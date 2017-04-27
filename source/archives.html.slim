@@ -2,32 +2,31 @@
 title: ライブディオ/ライブディオZX/スーパーディオを改造カスタムする日々の記録
 ---
 
-.unit
-  h1.headline
+.card
+  .card-header.headline
     | 原付改造カスタムブログ
-  .cassette.skin-pink
-    .center
-      img alt="原付改造カスタムブログ" src="imgs/archives_image.jpg" width="100%"
-    .inner
-      p.lead.center.bold
+  .card-body.skin-pink.text-center
+    = image_tag 'imgs/archives_image.jpg', alt: '原付改造カスタムブログ', class: 'img-fluid'
+  .card-block.skin-pink
+    p.text-center
+      b
         | ライブディオ/ライブディオZX/スーパーディオを改造カスタムする日々の記録
 
 section.spacing.center
   = partial 'layouts/ad_in_section'
 
 - blog.tags.reverse_each do |tag, articles|
-  .unit
-    h1.headline
+  .card
+    .card-header.headline
       = tag
-    - articles.each do |article|
-      article.cassette.skin-pink
-       = link_to article, class: 'tap', onclick: "ga('send', 'event', 'archives', 'click', '#{article.title}')"
-         .inner
-           .flexible
-             .item
-               p.sentence
-                 = article.title
-               p.small
-                 = article.date.strftime('%Y.%-m.%-d')
-             .item-caret
-               | &gt;
+    .list-group.list-group-flush
+      - articles.each do |article|
+        = link_to article, class: 'list-group-item skin-pink', onclick: "ga('send', 'event', 'archives', 'click', '#{article.title}')"
+          .full
+            span.pull-left
+              p
+                = article.title
+              p.small
+                = article.date.strftime('%Y.%-m.%-d')
+            span.pull-right.w-0
+              i.fa.fa-chevron-right aria-hidden="true"

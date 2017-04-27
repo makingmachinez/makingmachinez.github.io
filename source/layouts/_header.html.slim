@@ -1,29 +1,24 @@
-header.header
-  .inner
-    h1.logo
-      = link_to "/", class: 'hero'
-        |
-    p.hide makingmachinezでは、ボアアップしたライブディオZXの原付改造カスタムブログ、インプレッション、ミニツーリングレポート公開してます。
-    nav#navigation.navigation
-      ul.unstyled
-        li#menu1
-          = link_to "/archives.html"
+header
+  nav.navbar.fixed-top.header-nav
+    .container
+      = link_to '/', class: 'navbar-brand'
+        span.logo
+          span.logo-text
+            | MakingMachinez
+      ul.nav.nav-pills.nav-fill.nav-mm
+        li.nav-item#nav-gentsuki
+          = link_to "/archives.html", class: 'nav-link'
+            i.fa.fa-motorcycle aria-hidden="true"
             | 原付改造
-        li#menu2
-          = link_to "/spec.html"
+        li.nav-item#nav-impression
+          = link_to "/spec.html", class: 'nav-link'
+            i.fa.fa-sticky-note-o aria-hidden="true"
             | インプレ
-        li#menu3
-          = link_to "/gallery.html"
+        li.nav-item#nav-gallery
+          = link_to "/gallery.html", class: 'nav-link'
+            i.fa.fa-picture-o aria-hidden="true"
             | ギャラリー
-        li#menu4
-          = link_to "/about.html"
+        li.nav-item#nav-about
+          = link_to "/about.html", class: 'nav-link'
+            i.fa.fa-lightbulb-o aria-hidden="true"
             | あばうつ
-      javascript:
-        (function() {
-          var $menu = $('#navigation ul li a');
-          $menu.each(function(i, el) {
-            $(el).on('click', function() {
-              ga("send", "event", "navigation", "click", $(this).text());
-            });
-          });
-        })();

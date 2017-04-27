@@ -12,20 +12,19 @@ pageable: false
 
 - content_for(:title, "原付改造#{@n}まとめ")
 
-.unit
-  h1.headline
+.card
+  .card-header.headline
     | 原付改造
     = @n
     | まとめ
-  - page_articles.each_with_index do |article, i|
-    article.cassette.skin-pink
-      = link_to article, class: 'tap', onclick: "ga('send', 'event', 'calendar', 'click', '#{article.title}')"
-        .inner
-          .flexible
-            .item
-              p.sentence.spacing
-                = article.title
-              p.small
-                = article.date.strftime('%Y.%-m.%-d')
-            .item-caret
-              | &gt;
+  .list-group.list-group-flush
+    - page_articles.each_with_index do |article, i|
+      = link_to article, class: 'list-group-item skin-yellow', onclick: "ga('send', 'event', 'calendar', 'click', '#{article.title}')"
+        .full
+          span.pull-left
+            p
+              = article.title
+            p.small
+              = article.date.strftime('%Y.%-m.%-d')
+          span.pull-right.w-0
+            i.fa.fa-chevron-right aria-hidden="true"
