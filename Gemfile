@@ -1,19 +1,19 @@
-# If you have OpenSSL installed, we recommend updating
-# the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman", "~> 3.3.10"
-gem "middleman-blog"
+gem 'middleman'
+gem 'middleman-blog'
 gem 'middleman-slim'
-gem 'middleman-deploy', '~> 0.3.0'
+gem 'middleman-deploy'
 gem 'middleman-syntax'
-
-# For feed.xml.builder
-gem "builder", "~> 3.0"
-
-gem 'redcarpet'
-gem 'slim'
 gem 'middleman-minify-html'
 
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'materialize-sass'
+
+gem 'therubyracer'
+gem 'oj'
+
+gem "builder"
+gem 'redcarpet'
+
+gem 'bootstrap'
 gem "font-awesome-rails"
