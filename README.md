@@ -1,4 +1,4 @@
-# makingmachinez.github.io
+# makingmachinez.com
 
 https://www.makingmachinez.com/
 
