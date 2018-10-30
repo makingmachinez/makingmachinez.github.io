@@ -37,7 +37,7 @@ html
     link[href="/css/zflick.css" rel="stylesheet" type="text/css"]
     script src="https://code.jquery.com/jquery-2.1.4.min.js"
     script src="/js/zflick-2.1.min.js"
-    script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    script{ async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
     javascript:
       (adsbygoogle = window.adsbygoogle || []).push({
         google_ad_client: "ca-pub-8570723468408214",
@@ -53,9 +53,8 @@ html
     = partial 'layouts/header'
     section.contents
       .container
-        = partial 'layouts/ad-header'
+        = partial 'layouts/digrow'
         = yield
-        = partial 'layouts/adsense'
         = partial 'layouts/tags'
         = partial 'layouts/year'
         = partial 'layouts/comment'
