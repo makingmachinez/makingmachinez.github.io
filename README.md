@@ -1,5 +1,5 @@
 # makingmachinez.com
 
-https://www.makingmachinez.com/
+https://makingmachinez.com/
 
 &copy; [funnythingz](http://www.funnythingz.com/)
