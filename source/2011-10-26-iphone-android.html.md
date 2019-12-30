@@ -18,4 +18,6 @@ id: iphone-android
 
 <p class="sentence">そんな訳であまり期待せずお待ちいただければと思います...。<br>最後に戸田の謎スノボ動画をお楽しみください。</p>
 
-<div class="center"><iframe width="430" height="266" src="http://www.youtube.com/embed/KwVJRuEtAMc" frameborder="0" allowfullscreen></iframe></div>
+<div class="center">
+<iframe width="430" height="266" src="https://www.youtube.com/embed/KwVJRuEtAMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
