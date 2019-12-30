@@ -3,7 +3,7 @@
     | Tags
   .list-group.list-group-flush
     - blog.tags.each do |tag, articles|
-      = link_to tag_path(tag), class: 'list-group-item skin-yellow'
+      = link_to URI.escape(tag_path(tag)), class: 'list-group-item skin-yellow'
         .full
           span.pull-left
             | #{tag}
