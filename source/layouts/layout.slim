@@ -11,11 +11,11 @@ html
         | #{data.page.title} - 
       - unless yield_content(:title).nil?
         | #{yield_content(:title)} - 
-      | 原付改造カスタムブログ::makingmachinez
+      | #{blog.options.name}
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     meta[property="og:type" content="article"]
     meta[property="og:description" content="ボアアップしたライブディオZXの原付改造カスタムブログ、インプレッション、ミニツーリングレポート公開してます"]
-    meta[property="og:site_name" content="原付改造カスタムブログ::makingmachinez"]
+    meta[property="og:site_name" content="#{blog.options.name}"]
     meta[property="og:image" content="/imgs/archives_image.jpg"]
     - if current_article
       meta property="og:title" content="#{current_article.title}"
@@ -28,10 +28,10 @@ html
         link href="https://www.makingmachinez.com#{next_article.url}" rel=("next bookmark") title="#{next_article.title}"
 
     - else
-      meta[property="og:title" content="原付改造カスタムブログ::makingmachinez"]
+      meta[property="og:title" content="#{blog.options.name}"]
       meta[property="og:url" content="https://www.makingmachinez.com"]
 
-    link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet"
+    link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Love+Ya+Like+A+Sister&display=swap" rel="stylesheet"
     link[href="/css/makingmachinez.css?r" rel="stylesheet" type="text/css"]
     link[href="/css/zflick.css" rel="stylesheet" type="text/css"]
     script src="https://code.jquery.com/jquery-2.1.4.min.js"
