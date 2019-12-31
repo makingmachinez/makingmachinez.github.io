@@ -2,17 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>原付改造カスタムブログ - Making Machinez</title>
   <subtitle>ボアアップしたライブディオZXの原付改造カスタムブログ、インプレッション、ミニツーリングレポート公開してます</subtitle>
-  <id>https://www.makingmachinez.com/</id>
-  <link href="https://www.makingmachinez.com/"/>
-  <link href="https://www.makingmachinez.com/feed.xml" rel="self"/>
+  <id>https://makingmachinez.com/</id>
+  <link href="https://makingmachinez.com/"/>
+  <link href="https://makingmachinez.com/feed.xml" rel="self"/>
   <updated>2019-02-01T15:00:00Z</updated>
   <author>
     <name>funnythingz</name>
   </author>
   <entry>
     <title>ライブディオZXの修理</title>
-    <link rel="alternate" href="https://www.makingmachinez.com/2019/02/livediozx.html"/>
-    <id>https://www.makingmachinez.com/2019/02/livediozx.html</id>
+    <link rel="alternate" href="https://makingmachinez.com/2019/02/livediozx.html"/>
+    <id>https://makingmachinez.com/2019/02/livediozx.html</id>
     <published>2019-02-01T15:00:00Z</published>
     <updated>2019-12-31T13:49:46+09:00</updated>
     <author>
@@ -63,8 +63,8 @@
   </entry>
   <entry>
     <title>ライブディオからライブディオZXをつくった</title>
-    <link rel="alternate" href="https://www.makingmachinez.com/2017/04/livediozx.html"/>
-    <id>https://www.makingmachinez.com/2017/04/livediozx.html</id>
+    <link rel="alternate" href="https://makingmachinez.com/2017/04/livediozx.html"/>
+    <id>https://makingmachinez.com/2017/04/livediozx.html</id>
     <published>2017-04-09T15:00:00Z</published>
     <updated>2019-12-31T13:31:01+09:00</updated>
     <author>
@@ -103,8 +103,8 @@
   </entry>
   <entry>
     <title>ライブディオをライブディオZX風に再構築する</title>
-    <link rel="alternate" href="https://www.makingmachinez.com/2017/04/rebuild-livedio.html"/>
-    <id>https://www.makingmachinez.com/2017/04/rebuild-livedio.html</id>
+    <link rel="alternate" href="https://makingmachinez.com/2017/04/rebuild-livedio.html"/>
+    <id>https://makingmachinez.com/2017/04/rebuild-livedio.html</id>
     <published>2017-04-08T15:00:00Z</published>
     <updated>2019-12-31T13:23:52+09:00</updated>
     <author>
@@ -131,8 +131,8 @@
   </entry>
   <entry>
     <title>98年式ライブディオZXとライブディオ(排ガス規制後モデル)</title>
-    <link rel="alternate" href="https://www.makingmachinez.com/2017/03/livedio-and-livediozx.html"/>
-    <id>https://www.makingmachinez.com/2017/03/livedio-and-livediozx.html</id>
+    <link rel="alternate" href="https://makingmachinez.com/2017/03/livedio-and-livediozx.html"/>
+    <id>https://makingmachinez.com/2017/03/livedio-and-livediozx.html</id>
     <published>2017-03-10T15:00:00Z</published>
     <updated>2019-12-31T13:20:34+09:00</updated>
     <author>
@@ -169,8 +169,8 @@
   </entry>
   <entry>
     <title>ライブディオZXの98年式規制前フルパワー7.2psのZX</title>
-    <link rel="alternate" href="https://www.makingmachinez.com/2017/03/hello-zx98.html"/>
-    <id>https://www.makingmachinez.com/2017/03/hello-zx98.html</id>
+    <link rel="alternate" href="https://makingmachinez.com/2017/03/hello-zx98.html"/>
+    <id>https://makingmachinez.com/2017/03/hello-zx98.html</id>
     <published>2017-03-07T15:00:00Z</published>
     <updated>2018-09-20T00:14:29+09:00</updated>
     <author>
@@ -211,8 +211,8 @@
   </entry>
   <entry>
     <title>ライブディオを廃車にしました</title>
-    <link rel="alternate" href="https://www.makingmachinez.com/2017/03/goodbye-livedio.html"/>
-    <id>https://www.makingmachinez.com/2017/03/goodbye-livedio.html</id>
+    <link rel="alternate" href="https://makingmachinez.com/2017/03/goodbye-livedio.html"/>
+    <id>https://makingmachinez.com/2017/03/goodbye-livedio.html</id>
     <published>2017-03-06T15:00:00Z</published>
     <updated>2018-09-20T00:14:29+09:00</updated>
     <author>
