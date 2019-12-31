@@ -1,6 +1,6 @@
 xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
-  site_url = "https://www.makingmachinez.com/"
+  site_url = "https://makingmachinez.com/"
   xml.title "#{blog.options.name}"
   xml.subtitle "ボアアップしたライブディオZXの原付改造カスタムブログ、インプレッション、ミニツーリングレポート公開してます"
   xml.id URI.join(site_url, blog.options.prefix.to_s)
