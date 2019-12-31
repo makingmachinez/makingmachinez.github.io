@@ -125,4 +125,4 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-#activate :gzip
+activate :gzip
