@@ -14,7 +14,7 @@ html
       | #{blog.options.name}
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     meta[property="og:type" content="article"]
-    meta[property="og:description" content="ボアアップしたライブディオZXの原付改造カスタムブログ、インプレッション、ミニツーリングレポート公開してます"]
+    meta[property="og:description" content="ミニ四駆やボアアップしたライブディオZXの原付改造カスタムブログ、インプレッション、ミニツーリングレポート公開してます"]
     meta[property="og:site_name" content="#{blog.options.name}"]
     - if current_article
       meta[property="og:image" content="https://makingmachinez.com/photo/diary/#{current_article.date.strftime('%Y.%m.%d')}_01.jpg"]
@@ -30,7 +30,7 @@ html
     - else
       meta[property="og:image" content="https://makingmachinez.com/imgs/archives_image.jpg"]
       meta[property="og:title" content="#{blog.options.name}"]
-      meta[property="og:url" content="https://www.makingmachinez.com"]
+      meta[property="og:url" content="https://www.makingmachinez.com/#{current_path}"]
 
     link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Love+Ya+Like+A+Sister&display=swap" rel="stylesheet"
     link[href="/css/makingmachinez.css?r" rel="stylesheet" type="text/css"]
