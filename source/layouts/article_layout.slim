@@ -7,11 +7,12 @@
       = current_article.date.strftime('%Y年%-m月%-d日')
       br
       = current_article.title
-    .card-block.skin-pink
+    - if current_article.tags.include?('ミニ四駆')
+    .card-block class="skin-#{current_article.tags.include?('ミニ四駆') ? 'green' : 'pink'}"
       = partial 'layouts/ad_in_section'
       section.article
         = yield
-    .card-block.skin-pink.pager
+    .card-block.pager class="skin-#{current_article.tags.include?('ミニ四駆') ? 'green' : 'pink'}"
       .pull-left
         - prev_article = current_article.previous_article
         - if prev_article

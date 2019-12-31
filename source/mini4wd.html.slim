@@ -5,8 +5,30 @@ title: ミニ四駆(mini4wd)
 .card
   .card-header.headline
     | ミニ四駆
+  .card-body.skin-green.text-center
+    = image_tag 'photo/mini4wd/mini4wd.png', alt: 'とあるミニ四駆初心者のミニ四駆沼の記録日記', class: 'img-fluid'
   .card-body.skin-green
     .card-block
       .article
-        p.sentence
-          | comming soon
+        p.sentence.text-center
+          b
+            | I'm ready! Mini4WD！
+            br
+            | とあるミニ四駆初心者のミニ四駆沼の記録日記
+
+- blog.tags.reverse_each do |tag, articles|
+  - if tag === 'ミニ四駆'
+    .card
+      .card-header.headline
+        = tag
+      .list-group.list-group-flush
+        - articles.each do |article|
+          = link_to article, class: 'list-group-item skin-green', onclick: "ga('send', 'event', 'archives', 'click', '#{article.title}')"
+            .full
+              span.pull-left
+                p
+                  = article.title
+                p.small
+                  = article.date.strftime('%Y.%-m.%-d')
+              span.pull-right.w-0
+                i.fa.fa-chevron-right aria-hidden="true"
