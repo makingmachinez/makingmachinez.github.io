@@ -3,8 +3,8 @@ html
   head
     meta[charset="utf-8"]
     meta name="viewport" content="width=420"
-    meta name="Keywords" content="原付改造,原付,改造,ディオ,ZX,ZZ,ZR,Jog,ボアアップ,チャンバー,エアーフィルター,ブログ,makingmachinez"
-    meta name="description" content="makingmachinezでは、ボアアップしたライブディオZXの原付改造カスタムブログ、インプレッション、ミニツーリングレポート公開してます"
+    meta name="keywords" content="ミニ四駆,mini4wd,原付改造,原付,改造,ディオ,ZX,ZZ,ZR,Jog,ボアアップ,チャンバー,エアーフィルター,ブログ,makingmachinez"
+    meta name="description" content="makingmachinezでは、ミニ四駆の改造や、ボアアップしたライブディオZXの原付改造カスタムブログ、インプレッション、ミニツーリングレポート公開してます"
     meta name="google-site-verification" content="6dpKNr8qX1v7dHEeHPVBWgEI4dv29PoFTuZwEYFOsoU"
     title
       - unless data.page.title.nil?
@@ -28,8 +28,14 @@ html
         link href="https://makingmachinez.com#{next_article.url}" rel=("next bookmark") title="#{next_article.title}"
 
     - else
-      meta[property="og:image" content="https://makingmachinez.com/imgs/archives_image.jpg"]
-      meta[property="og:title" content="#{blog.options.name}"]
+      - case current_path.gsub(/\.html/, '')
+      - when 'spec'
+        meta[property="og:image" content="https://makingmachinez.com/imgs/spec.jpg"]
+      - when 'mini4wd'
+        meta[property="og:image" content="https://makingmachinez.com/imgs/mini4wd.jpg"]
+      - else
+        meta[property="og:image" content="https://makingmachinez.com/imgs/archives_image.jpg"]
+      meta[property="og:title" content="#{data.page.title.nil? ? blog.options.name : data.page.title + ' | ' + blog.options.name}"]
       meta[property="og:url" content="https://makingmachinez.com/#{current_path}"]
 
     link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Love+Ya+Like+A+Sister&display=swap" rel="stylesheet"
